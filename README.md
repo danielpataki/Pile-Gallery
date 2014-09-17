@@ -36,9 +36,9 @@ This **filter** runs on piles of the given type. The type may be `post`, `galler
 
 ### pile_gallery/post_query_args
 
-This **filter** allows you to modify the arguments passed to the `WP_Query` object while retrieving the posts for Pile Galleries which are based on posts. Beware, removing the `tax_query` will remove the retrieval by category.
+This **filter** allows you to modify the arguments passed to the `WP_Query` object while retrieving the posts for Pile Galleries which are based on posts. Beware, removing the `tax_query` will remove the retrieval by category. This hook receives two parameters. The first is <code>$args</code> which is the original array, the second is <code>$id</code>, the ID of the pile gallery post.
 
 
 ### pile_gallery/gallery_query_args
 
-This **filter** allows you to modify the arguments passed to the `WP_Query` object while retrieving the posts for Pile Galleries which are based on media items. Beware, removing the `tax_query` will remove the retrieval by category.
+This **filter** allows you to modify the arguments passed to the `WP_Query` object while retrieving the posts for Pile Galleries which are based on media items. Beware, removing the `tax_query` will remove the retrieval by category. This hook receives two parameters. The first is <code>$args</code> which is the original array, the second is <code>$id</code>, the ID of the pile gallery post.

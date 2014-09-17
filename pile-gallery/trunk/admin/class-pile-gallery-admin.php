@@ -207,4 +207,16 @@ class Pile_Gallery_Admin {
 	}
 
 
+	/**
+	 * Hides the ACF menu
+	 *
+	 * @since    1.0.2
+	 */
+	public function disable_acf_menu() {
+		if( !defined( 'ACF_LITE' ) ) {
+			define( 'ACF_LITE' , true );
+		}
+	}
+
+
 }

@@ -178,6 +178,7 @@ class Pile_Gallery {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'init', $plugin_admin, 'post_type' );
 		$this->loader->add_action( 'tgmpa_register', $plugin_admin, 'required_plugins' );
+		$this->loader->add_action( 'plugins_loaded', $plugin_admin, 'disable_acf_menu' );
 
 		// Admin Post List Modifications
 		$this->loader->add_filter( 'manage_pile_gallery_posts_columns', $plugin_admin, 'admin_list_columns' );
