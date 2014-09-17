@@ -1,3 +1,9 @@
+# 1.0.3
+
+- Made sure only posts with images show up in post galleries
+- Added an images per pile option
+- Fixed an issue with media piles not showing up
+
 # 1.0.2
 
 - The ACF_LITE definition now uses a hook so it may be removed

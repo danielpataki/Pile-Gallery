@@ -106,12 +106,16 @@ class Pile_Gallery_Shortcodes {
         $taxonomy = ( is_array( $taxonomy ) ) ? $taxonomy[0] : $taxonomy;
         $terms = get_terms( $taxonomy );
 
+        $posts_per_page = get_field( 'pg_images_per_pile', $id );
+		$posts_per_page = ( empty( $posts_per_page ) ) ? 6 : $posts_per_page;
+
         if( empty( $terms ) || is_wp_error( $terms ) ) {
             return false;
         }
 
         while( $term = current( $terms ) ) {
 			$args = array(
+				'posts_per_page' => $posts_per_page,
                 'tax_query' => array(
                     array(
                         'taxonomy' => $taxonomy,
@@ -119,6 +123,13 @@ class Pile_Gallery_Shortcodes {
                         'terms'    => $term->term_id
                     ),
                 ),
+				'meta_query' => array(
+					array(
+						'key' => '_thumbnail_id',
+						'value' => '',
+						'compare' => '!='
+					)
+				)
             );
 
 			$args = apply_filters( 'pile_gallery/post_query_args', $args, $id );
@@ -157,7 +168,57 @@ class Pile_Gallery_Shortcodes {
     public function pile_gallery_gallery( $id, $atts ) {
         extract( $atts );
 
-		return array();
+		$pile = array();
+
+        $taxonomy = get_field( 'pg_gallery_taxonomy', $id );
+        $taxonomy = ( is_array( $taxonomy ) ) ? $taxonomy[0] : $taxonomy;
+        $terms = get_terms( $taxonomy );
+
+        $posts_per_page = get_field( 'pg_images_per_pile', $id );
+		$posts_per_page = ( empty( $posts_per_page ) ) ? 6 : $posts_per_page;
+
+        if( empty( $terms ) || is_wp_error( $terms ) ) {
+            return false;
+        }
+
+        while( $term = current( $terms ) ) {
+			$args = array(
+				'posts_per_page' => $posts_per_page,
+				'post_type' => 'attachment',
+				'post_status' => 'any',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => $taxonomy,
+                        'field'    => 'term_id',
+                        'terms'    => $term->term_id
+                    ),
+                ),
+            );
+
+			$args = apply_filters( 'pile_gallery/gallery_query_args', $args, $id );
+
+            $term_posts = new WP_Query( $args );
+
+
+            while( $term_posts->have_posts() ) {
+                $term_posts->the_post();
+
+                $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+                $attachment = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+
+				$pile[] = array(
+					'pile'  => $term->name,
+					'title' => the_title( '', '', false ),
+					'img'   => $attachment[0]
+				);
+
+	        }
+
+            next( $terms );
+
+        }
+
+		return $pile;
 
     }
 

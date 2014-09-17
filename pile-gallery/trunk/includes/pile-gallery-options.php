@@ -72,6 +72,27 @@ if(function_exists("register_field_group"))
 				'return_value' => 'term_id',
 			),
 			array (
+				'key' => 'field_54c8ccaac586c',
+				'label' => __( 'Images Per Pile', $this->Pile_Gallery_Pro ),
+				'name' => 'pg_images_per_pile',
+				'type' => 'number',
+				'instructions' => __( 'Set the maximum number of images to show inside each pile. To show all posts use -1 but beware, this can lead to a lot of images being loaded!', $this->Pile_Gallery_Pro),
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5408b8170c40a',
+							'operator' => '==',
+							'value' => 'post',
+						),
+					),
+					'allorany' => 'any',
+				),
+				'min' => -1,
+				'max' => 39,
+				'default_value' => 6
+			),
+			array (
 				'key' => 'field_5408bec25d18a',
 				'label' => __( 'Update Now', $this->Pile_Gallery ),
 				'name' => '',
