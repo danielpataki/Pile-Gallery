@@ -26,6 +26,8 @@ A number of things can be customized on the back and the front end to make Pile 
 
 Pile Gallery should also work on all your devices like tablets and phones. It is completely responsive, going into a one-column layout on smaller screens
 
+I'd like to say a special thank you to Pedro Botelho for his [Codrops Post](http://tympanus.net/codrops/2012/11/21/adaptive-thumbnail-pile-effect-with-automatic-grouping/) upon which we based the Javascript functionality of the plugin. Take a look at [his work](http://tympanus.net/codrops/author/pbotelho/), it's awesome!
+
 == Installation ==
 
 1. Upload `pile-gallery.zip` to the `/wp-content/plugins/` directory
