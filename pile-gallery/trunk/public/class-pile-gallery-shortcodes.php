@@ -121,7 +121,7 @@ class Pile_Gallery_Shortcodes {
                 ),
             );
 
-			$args = apply_filters( 'pile_gallery/post_query_args', $args );
+			$args = apply_filters( 'pile_gallery/post_query_args', $args, $id );
 
             $term_posts = new WP_Query( $args );
 
