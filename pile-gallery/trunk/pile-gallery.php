@@ -35,7 +35,9 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Hide the ACF UI
  */
-define( 'ACF_LITE' , true );
+if( !defined( 'ACF_LITE' ) ) {
+	define( 'ACF_LITE' , true );
+}
 
 /**
  * The core plugin class that is used to define internationalization,
