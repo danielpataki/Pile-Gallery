@@ -1,3 +1,6 @@
+# 1.0.4
+- Removed custom gallery function since it is only for the pro version
+
 # 1.0.3
 
 - Made sure only posts with images show up in post galleries

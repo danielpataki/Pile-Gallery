@@ -62,6 +62,10 @@ No need to update, this is the first version :)
 
 == Changelog ==
 
+= 1.0.4 =
+
+- Removed an unnecessary function
+
 = 1.0.3 =
 
 - Made sure only posts with images show up in post galleries
