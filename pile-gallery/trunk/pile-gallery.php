@@ -8,7 +8,7 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://bonsaished.com/playground/pile-gallery
+ * @link              http://pilegallery.com
  * @since             1.0.0
  * @package           Pile-Gallery
  * @todo              Change link above and below to whatever is needed
