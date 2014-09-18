@@ -65,6 +65,7 @@ No need to update, this is the first version :)
 = 1.0.4 =
 
 - Removed an unnecessary function
+- Updated language file
 
 = 1.0.3 =
 
