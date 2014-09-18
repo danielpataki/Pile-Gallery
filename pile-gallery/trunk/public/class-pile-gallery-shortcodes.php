@@ -73,20 +73,7 @@ class Pile_Gallery_Shortcodes {
 
 	public function pile_gallery_custom( $id, $atts ) {
 		$pile = array();
-		if( have_rows('piles', $id ) ) {
-    		while ( have_rows('piles', $id) ) {
-				the_row();
-				$pile_name = get_sub_field( 'pile_name' );
-				$images = get_sub_field( 'pile_images' );
-				foreach( $images as $image )
-				$pile[] = array(
-					'pile' => $pile_name,
-					'title' => $image['title'],
-					'img' => $image['url']
-				);
-			}
-		}
-
+		// This function is only available in the pro version
 		return $pile;
 	}
 
