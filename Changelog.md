@@ -1,6 +1,10 @@
+# 1.0.5
+- Updated for new pricing
+- Fixed a class name error
+
 # 1.0.4
 - Removed custom gallery function since it is only for the pro version
-- Updated the pot file 
+- Updated the pot file
 
 # 1.0.3
 

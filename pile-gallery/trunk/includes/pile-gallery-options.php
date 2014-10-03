@@ -73,10 +73,10 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_54c8ccaac586c',
-				'label' => __( 'Images Per Pile', $this->Pile_Gallery_Pro ),
+				'label' => __( 'Images Per Pile', $this->Pile_Gallery ),
 				'name' => 'pg_images_per_pile',
 				'type' => 'number',
-				'instructions' => __( 'Set the maximum number of images to show inside each pile. To show all posts use -1 but beware, this can lead to a lot of images being loaded!', $this->Pile_Gallery_Pro),
+				'instructions' => __( 'Set the maximum number of images to show inside each pile. To show all posts use -1 but beware, this can lead to a lot of images being loaded!', $this->Pile_Gallery),
 				'conditional_logic' => array (
 					'status' => 1,
 					'rules' => array (
@@ -110,7 +110,7 @@ if(function_exists("register_field_group"))
 				),
 				'message' =>
 				'<div id="custom-gallery-promo">' .
-				'<a class="promo-button" href="gum.co/pilegallery"><span class="amount">$6</span> Buy Now</a>' .
+				'<a class="promo-button" href="gum.co/pilegallery"><span class="amount">$2.99</span> Buy Now</a>' .
 				'<p>' .
 				__('We really wanted to give you the custom built gallery for free but unfortunately the licence of ACF (a module used in the plugin) does not allow us to distribute some fields in free plugins. We decided we\'d give you as much as possible for free and only the custom gallery will require an upgrade.', $this->Pile_Gallery ) .
 				'</p>' .
@@ -120,7 +120,7 @@ if(function_exists("register_field_group"))
 				'<p>' .
 				'<img src="' .plugins_url( '../admin' , __FILE__ ) . '/img/custom-promo.jpg">' .
 				'</p>' .
-				'<a class="promo-button" href=""><span class="amount">$6</span> Buy Now</a>' .
+				'<a class="promo-button" href="gum.co/pilegallery"><span class="amount">$2.99</span> Buy Now</a>' .
 				'</div>'
 				,
 
