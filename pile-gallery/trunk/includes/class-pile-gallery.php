@@ -69,7 +69,7 @@ class Pile_Gallery {
 	public function __construct() {
 
 		$this->Pile_Gallery = 'pile-gallery';
-		$this->version = '1.0.5';
+		$this->version = '1.0.6';
 
 		$this->load_dependencies();
 		$this->set_locale();

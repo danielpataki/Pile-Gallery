@@ -159,7 +159,7 @@ class Pile_Gallery_Shortcodes {
 
         $taxonomy = get_field( 'pg_gallery_taxonomy', $id );
         $taxonomy = ( is_array( $taxonomy ) ) ? $taxonomy[0] : $taxonomy;
-        $terms = get_terms( $taxonomy );
+        $terms = get_terms( $taxonomy, array( 'hide_empty' => false ) );
 
         $posts_per_page = get_field( 'pg_images_per_pile', $id );
 		$posts_per_page = ( empty( $posts_per_page ) ) ? 6 : $posts_per_page;

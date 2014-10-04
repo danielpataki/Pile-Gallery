@@ -1,3 +1,6 @@
+# 1.0.6
+- Fixed media categories not showing up if empty
+
 # 1.0.5
 - Updated for new pricing
 - Fixed a class name error

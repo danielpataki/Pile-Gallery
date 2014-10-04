@@ -18,7 +18,7 @@
  * Plugin Name:       Pile Gallery
  * Plugin URI:        http://bonsaished.com/playground/pile-gallery
  * Description:       Create beautiful sortable and stackable galeries from your WordPress posts and media items
- * Version:           1.0.5
+ * Version:           1.0.6
  * Author:            Bonsai Shed
  * Author URI:        http://bonsaished.com/
  * License:           GPL-2.0+
